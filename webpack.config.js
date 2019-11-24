@@ -49,9 +49,7 @@ module.exports = function(env, argv) {
         inject: true,
         hash: true
       }),
-      new StaticAssetsPlugin({
-        isProduction
-      })
+      new StaticAssetsPlugin({ isProduction })
     ]
   }
 }

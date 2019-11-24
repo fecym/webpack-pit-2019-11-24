@@ -6,8 +6,9 @@ class StaticAssetsPlugin {
   }
   // 在插件中 new 的时候会自动执行 apply 方法，主入口方法
   apply(complier) {
-    // webpack 编译的生命周期 
+    // 若是开发环境则不执行
     if (!this.options.isProduction) return
+    // webpack 编译的生命周期 
     // console.log(complier.hooks)
     // 监听过程，拿到结果
     complier.hooks.done.tap('StaticAssetsPlugin', compontion => {
